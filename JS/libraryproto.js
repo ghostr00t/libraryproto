@@ -111,11 +111,12 @@ var album2 = new Album("Sgt. Pepper's Lonely Hearts Club Band", "The Beatles", 1
 var album3 = new Album("Led Zeppelin IV (aka ZOSO)", "Led Zeppelin", 8, "1971-11-8");
 var album4 = new Album("Nevermind", "Nirvana", 12, "1991-9-24");
 var album5 = new Album("Ok Computer", "Radiohead", 12, "1997-5-21");
-
+var album6 = new Album("The Wall", "Pink Floyd", 26, "1979-11-30");
 // playlist1.addAlbum(album1);
 // playlist1.addAlbum(album2);
 // playlist1.addAlbum(album3);
 // playlist1.addAlbum(album4);
 // playlist1.addAlbum(album5);
+// playlist1.addAlbum(album6);
 
 //localStorage.setItem("albums", JSON.stringify(playlist1.myPlaylistArray));
