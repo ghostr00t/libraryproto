@@ -9,7 +9,7 @@ var playlist = function() {};
 
 playlist.prototype.myPlaylistArray = new Array();
 
-playlist.prototype.addAlbum = function(album) { //accepts album object you created
+playlist.prototype.addAlbum = function(album) { //accepts album object 
     for (i = 0; i < this.myPlaylistArray.length; i++) {
         if (this.myPlaylistArray[i].title == album.title) {
             return false;
@@ -20,13 +20,13 @@ playlist.prototype.addAlbum = function(album) { //accepts album object you creat
 };
 
 playlist.prototype.removeAlbumByTitle = function(title) { //accepts string
-for (var i = 0; i < this.myPlaylistArray.length; i++) {
-if (this.myPlaylistArray[i].title == title) {
-this.myPlaylistArray.splice(i, 1);
-return true;
-}
-}
-return false
+    for (var i = 0; i < this.myPlaylistArray.length; i++) {
+        if (this.myPlaylistArray[i].title == title) {
+            this.myPlaylistArray.splice(i, 1);
+            return true;
+        }
+    }
+    return false
 }
 // var albumLength = this.myPlaylistArray.length;
 //   this.myPlaylistArray.map((album, index)=>{
@@ -37,13 +37,13 @@ return false
 //   return (albumLength ==  this.myPlaylistArray.length) ? (false) : (true);
 //};
 playlist.prototype.removeAlbumByArtist = function(artist) { //accepts string
-for (var i = 0; i < this.myPlaylistArray.length; i++) {
-if (this.myPlaylistArray[i].artist == artist) {
-this.myPlaylistArray.splice(i, 1);
-return true;
-}
-}
-return false
+    for (var i = 0; i < this.myPlaylistArray.length; i++) {
+        if (this.myPlaylistArray[i].artist == artist) {
+            this.myPlaylistArray.splice(i, 1);
+            return true;
+        }
+    }
+    return false
 }
 // var albumLength = this.myPlaylistArray.length;
 //   this.myPlaylistArray.map((album, index)=>{
@@ -54,8 +54,8 @@ return false
 //   return (albumLength ==  this.myPlaylistArray.length) ? (false) : (true);
 //};
 playlist.prototype.getRandomAlbum = function() { //accepts string
-var randomAlbum = Math.floor(Math.random() * this.myPlaylistArray.length);
-return this.myPlaylistArray.length <= 0 ? null : this.myPlaylistArray[randomAlbum];
+    var randomAlbum = Math.floor(Math.random() * this.myPlaylistArray.length);
+    return this.myPlaylistArray.length <= 0 ? null : this.myPlaylistArray[randomAlbum];
 };
 
 playlist.prototype.getAlbumByTitle = function(title) { //accepts string
@@ -100,8 +100,8 @@ playlist.prototype.getArtists = function() {
 }
 
 playlist.prototype.getRandomArtistName = function() { //accepts array
-var randomArtist = Math.floor(Math.random() * this.myPlaylistArray.length);
-return this.myPlaylistArray[randomArtist].artist;
+    var randomArtist = Math.floor(Math.random() * this.myPlaylistArray.length);
+    return this.myPlaylistArray[randomArtist].artist;
 };
 
 var playlist1 = new playlist();
