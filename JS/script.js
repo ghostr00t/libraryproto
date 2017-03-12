@@ -8,14 +8,15 @@ $(document).ready(function () {
             url: "http://ws.audioscrobbler.com/2.0/?method=album.search&album=love&api_key=3c60da92d4028ba77acda77715e046d5&format=json&callback=?",
             dataType: 'json',
             success: function (data) {
-                debugger
                 for (var i = 0; i < data.results.albummatches.album.length; i++) {
-                    var row = $('<tr><td>' + data.results.albummatches.album[i].artist + '</td><td>' + data.results.albummatches.album[i].name + '</td><td>' + data.results.albummatches.album[i].url + '</td></tr>');
+                    var row = $('<tr><td> <button class=" +"addbtn" +">Add</button> </td><td>' + data.results.albummatches.album[i].artist + '</td><td>' + data.results.albummatches.album[i].name + '</td><td>' + data.results.albummatches.album[i].url + '</td></tr>');
                     $('#albumTable').append(row);
                 }
             }
         });
-    });
+   
+
+ });
 });
 
 
