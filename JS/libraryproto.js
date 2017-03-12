@@ -1,9 +1,10 @@
+$( document ).ready(){
 function Album(title, artist, numberOfTracks, releaseDate) {
     this.title = title;
     this.artist = artist;
     this.numberOfTracks = numberOfTracks;
     this.releaseDate = releaseDate;
-}
+});
 
 var playlist = function () {};
 

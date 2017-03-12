@@ -1,0 +1,12 @@
+LastFM
+
+Application name	School Project
+API key	3c60da92d4028ba77acda77715e046d5
+Shared secret	8296e3911d5108f09d9e96fe290fa8ce
+Registered to	richardtwise
+
+
+get album by name- http://ws.audioscrobbler.com/2.0/?method=album.search&album=believe&api_key=3c60da92d4028ba77acda77715e046d5&format=json&callback=?
+get artist by name- http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=cher&api_key=3c60da92d4028ba77acda77715e046d5&format=json
+get album info- http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=3c60da92d4028ba77acda77715e046d5&artist=Cher&album=Believe&format=json
+
