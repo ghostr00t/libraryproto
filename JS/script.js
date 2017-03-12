@@ -5,7 +5,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "GET",
-            url: "http://ws.audioscrobbler.com/2.0/?method=album.search&album=dog&api_key=3c60da92d4028ba77acda77715e046d5&format=json&callback=?",
+            url: "http://ws.audioscrobbler.com/2.0/?method=album.search&album=love&api_key=3c60da92d4028ba77acda77715e046d5&format=json&callback=?",
             dataType: 'json',
             success: function (data) {
                 debugger

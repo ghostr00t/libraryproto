@@ -1,1 +1,0 @@
-https://freemusicarchive.org/api/get/artists.xml?api_key=CRFZY2NIUSIHIZU1
