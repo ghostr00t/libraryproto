@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/customize.css">
 </head>
+
 <body>
 
 
@@ -15,82 +16,82 @@
 
 
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-12">
-            <h1>TRAVIE.IO</h1>
-            <img class= main-logo src="images\rocklogo.png" class="logo img-responsive center-block">
-            <div class="input-group" id="adv-search">
-                <input type="text" class="form-control" placeholder="Search the library" />
-                <div class="input-group-btn">
-                    <div class="btn-group" role="group">
-                        <div class="dropdown dropdown-lg">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-                            <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <form class="form-horizontal" role="form">
-                                  <div class="form-group">
-                                    <label for="filter">Filter by</label>
-                                    <select class="form-control">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>TRAVIE.IO</h1>
+                <!--<img class=m ain-logo src="images\rocklogo.png" class="logo img-responsive center-block">-->
+                <div class="input-group" id="adv-search">
+                    <input type="text" class="form-control" placeholder="Search the library" />
+                    <div class="input-group-btn">
+                        <div class="btn-group" role="group">
+                            <div class="dropdown dropdown-lg">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label for="filter">Filter by</label>
+                                            <select class="form-control">
                                         <option value="0" selected>Please select an option.</option>
                                         <option value="1">Album(s)</option>
                                         <option value="2">Artist</option>
                                         <option value="3">Title</option>
                                         <option value="4">Random</option>
                                     </select>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="contain">Contains</label>
-                                    <input class="form-control" type="text" />
-                                  </div>
-                                  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                                </form>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contain">Contains</label>
+                                            <input class="form-control" type="text" />
+                                        </div>
+                                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    </form>
+                                </div>
                             </div>
+                            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                         </div>
-                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                     </div>
                 </div>
             </div>
-          </div>
         </div>
-	</div>
-</div>
-<div id="modal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                 <h4 class="modal-title">Music Results</h4>
-            </div>
-            <div class="modal-body">
+    </div>
+    </div>
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Music Results</h4>
+                </div>
+                <div class="modal-body">
 
 
-           <table class="personDataTable">
-    <tr>
-        <th>Artist</th>
-        <th>Title</th>
-        <th>URL</th>
-    </tr>
-    
-    
-</table>
+                    <table id="albumTable">
+                        <tr>
+                            <th>Artist</th>
+                            <th>Title</th>
+                            <th>URL</th>
+                        </tr>
 
 
-        
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </table>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="panel panel-info">
-  <div class="panel-heading">My Playlist</div>
-  <div class="panel-body">
-      
+    <div class="panel panel-info">
+        <div class="panel-heading">My Playlist</div>
+        <div class="panel-body">
 
 
-  </div>
-</div>
+
+        </div>
+    </div>
 
 
 
