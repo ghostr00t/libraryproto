@@ -14,10 +14,10 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>TRAVIE.IO</h1>
-                <<img class="main-logo" ain-logo src="images\rocklogo.png" class="logo img-responsive center-block">
+                <img class="main-logo" ain-logo src="images\rocklogo.png" class="logo img-responsive center-block">
                 <div id="custom-search-input">
                     <div class="input-group col-md-12">
-                        <input type="text" class="search-query form-control" id="albumInput" placeholder="Search Albums" />
+                        <input type="text" class="search-query form-control" id="albumInput" placeholder="Search Artists"/>
                         <span class="input-group-btn">
                          <button class="btn btn-danger" type="button" id="submit">
                          <span class=" glyphicon glyphicon-search"></span>
@@ -37,12 +37,17 @@
                 </div>
                 <div class="modal-body">
                     <table id="albumTable">
+                        <thead>
                         <tr>
                             <th>Playlist</th>
                             <th>Artist</th>
                             <th>Title</th>
                             <th>Playcount</th>
                         </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
                     </table>
                 </div>
                 <div class="modal-footer">
@@ -51,14 +56,15 @@
             </div>
         </div>
     </div>
-    <div class="panel panel-info">
+    <div class="panel panel-info" id="playlist-panel">
         <div class="panel-heading">My Playlist</div>
         <div class="panel-body">
+            
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="JS/script.js" type="text/javascript"></script>
+    <script src="JS/script1.js" type="text/javascript"></script>
 </body>
 
 </html>

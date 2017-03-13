@@ -24,14 +24,14 @@ playlist.prototype.myAjax = function () {
         cache: false,
         success: function (data) {
             for (var i = 0; i < data.topalbums.album.length; i++) {
-                var row = $('<tr><td> <button class="addbtn">Add</button> </td><td>' + data.topalbums.album[i].artist.name + '</td><td>' + data.topalbums.album[i].name + '</td><td>' + data.topalbums.album[i].playcount + '</td></tr>');
+                var sJson = JSON.stringify(data.topalbums.album[i]);
+                var row = $('<tr data-raw='+ sJson +'><td> <button class="addbtn">Add</button> </td><td>' + data.topalbums.album[i].artist.name + '</td><td>' + data.topalbums.album[i].name + '</td><td>' + data.topalbums.album[i].playcount + '</td></tr>');
                 $('#albumTable').append(row);
             }
             $(".addbtn").on("click", function () {
                 $('#albumTable').find('tr').click(function () {
                     for (i = 0; i < 1; i++) {
-                        console.log(this);
-                        
+                        console.log($(this).attr("data-raw"));
                     }
                 });
 
@@ -40,32 +40,26 @@ playlist.prototype.myAjax = function () {
     });
 }
 
-playlist.prototype.moveRow = function () {
 
+// playlist.prototype.rowObj = function () {
+//     var cols = [];
+//     var result = [];
+//     $('#albumTable > thead > th').each(function () {
+//         cols.push($(this).text().toLowerCase());
+//     });
+//     $('#albumTable > tbody > tr').each(function (id) {
+//         var row = {
+//             'id': id + 1
+//         };
+//         $(this).find('td').each(function (index) {
+//             row[cols[index]] = $(this).text();
+//         });
+//         result.push(row);
+//     });
 
-    
-}
+//     console.log(result);
 
-
-playlist.prototype.rowObj = function () {
-    var cols = [];
-    var result = [];
-    $('#albumTable > thead > th').each(function () {
-        cols.push($(this).text().toLowerCase());
-    });
-    $('#albumTable > tbody > tr').each(function (id) {
-        var row = {
-            'id': id + 1
-        };
-        $(this).find('td').each(function (index) {
-            row[cols[index]] = $(this).text();
-        });
-        result.push(row);
-    });
-
-    console.log(result);
-
-}
+// }
 
 
 playlist.prototype.myPlaylistArray = new Array();
