@@ -1,5 +1,10 @@
 $(document).ready(function () {
-
+    function Album(title, artist, playcount) {
+    this.myAlbum.name = title;
+    this.artist.name = artist;
+    this.newAlbum.playcount = playcount;
+    }
+ 
     $("#albumInput").keyup(function (event) {
         if (event.keyCode == 13) {
             $("#submit").click();
@@ -14,7 +19,12 @@ $(document).ready(function () {
 });
 
 var playlist = function () {};
+
+
+
 var returnedList;
+
+var newAlbum = {};
 
 
 playlist.prototype.myAjax = function () {
@@ -34,8 +44,9 @@ playlist.prototype.myAjax = function () {
                 $('#albumTable').find('tr').click(function () {
                     for (i = 0; i < 1; i++) {
                         var returnedListId =$(this).attr("data-returned-list-id");
-                        var album = returnedList.topalbums.album[returnedListId];
-                        console.log(album);
+                        newAlbum = returnedList.topalbums.album[returnedListId];
+                        return(newAlbum);
+
                     }
                 });
 
@@ -44,14 +55,11 @@ playlist.prototype.myAjax = function () {
     });
 }
 
-
-
-
 playlist.prototype.myPlaylistArray = new Array();
 
 playlist.prototype.addAlbum = function (album) {
     for (i = 0; i < this.myPlaylistArray.length; i++) {
-        if (this.myPlaylistArray[i].title == album.title) {
+        if (this.myPlaylistArray[i].title == newAlbum.title) {
             return false;
         }
     }
