@@ -14,13 +14,14 @@ $(document).ready(function () {
     $("#submit").on("click", function () {
         $("#modal").modal("show");
         playlist1.myAjax();
-
+    
+    });
+    $("#closeModal").on("click", function () {
+        $("#albumTable").empty();
     });
 });
 
 var playlist = function () {};
-
-
 
 var returnedList;
 
@@ -46,8 +47,8 @@ playlist.prototype.myAjax = function () {
                     var returnedListId = $(this).attr("data-returned-list-id");
                     newAlbum = returnedList.topalbums.album[returnedListId];
                     self.addAlbum(newAlbum);
-                    //return (newAlbum);
                 });
+
             });
         }
     });
@@ -56,10 +57,11 @@ playlist.prototype.myAjax = function () {
 
 playlist.prototype.myPlaylistArray = new Array();
 
-playlist.prototype.displayPlaylist = function () {
-    $("#displayPlaylist").empty();
+playlist.prototype.stagePlaylist = function () {
+    
+    $("#stagePlaylistArea").empty();
     $.each(this.myPlaylistArray, function (index, value) {
-        $("#displayPlaylistArea").append(
+        $("#stagePlaylistArea").append(
             "<tr>",
             "<td>" + value.artist.name + "</td>",
             "<td>" + value.name + "</td>",
@@ -69,6 +71,22 @@ playlist.prototype.displayPlaylist = function () {
     });
 }
 
+playlist.prototype.playPlaylist = function() {
+
+    $("#displayPlaylistArea").empty();
+    $.each(this.myPlaylistArray, function (index, value) {
+        $("#displayPlaylistArea").append(
+            "<tr>",
+            "<td>" + value.artist.name + "</td>",
+            "<td>" + value.name + "</td>",
+            "<td>" + value.playcount + "</td>",
+            "</tr>"
+        )
+    });
+
+
+}
+
 playlist.prototype.addAlbum = function (album) {
     for (i = 0; i < this.myPlaylistArray.length; i++) {
         if (this.myPlaylistArray[i].name == newAlbum.name) {
@@ -76,13 +94,13 @@ playlist.prototype.addAlbum = function (album) {
         }
     }
     this.myPlaylistArray.push(album);
-    this.displayPlaylist();
+    this.stagePlaylist();
     return true;
 };
 
 playlist.prototype.removeAlbumByTitle = function (title) {
     for (var i = 0; i < this.myPlaylistArray.length; i++) {
-        if (this.myPlaylistArray[i].title == title) {
+        if (this.myPlaylistArray[i].name == name) {
             this.myPlaylistArray.splice(i, 1);
             return true;
         }

@@ -4,24 +4,20 @@ body {
 }
 
 h1 {
-  text-align: center;
+    text-align: center;
 }
 
 .main-logo {
-
-  height: 25%;
-  width: 25%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    height: 25%;
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .input-group {
-
- max-width: 750px;
- 
-  margin: 0 auto;
-  ;
+    max-width: 750px;
+    margin: 0 auto;
 }
 
 .panel {
@@ -31,30 +27,30 @@ h1 {
     margin: 0 auto;
 }
 
-/*.modal{
-   max-height:80%;
-}*/
-.modal-header{
-   height:15%;    
+.modal-header {
+    height: 15%;
 }
-.modal-body{
-   height:70%;
-   overflow:auto;
+
+.modal-body {
+    height: 70%;
+    overflow: auto;
 }
 
 .modal-content {
-  height:500px;
-  overflow:auto;
+    height: 500px;
+    overflow: auto;
 }
 
 table {
     max-width: 100%;
 }
+
 th {
     background lightblue;
     font-weight: bold;
     padding: 6px;
 }
+
 td {
     background: #f9f9f9;
     padding: 6px;

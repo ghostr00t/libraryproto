@@ -17,7 +17,7 @@
                 <img class="main-logo" ain-logo src="images\rocklogo.png" class="logo img-responsive center-block">
                 <div id="custom-search-input">
                     <div class="input-group col-md-12">
-                        <input type="text" class="search-query form-control" id="albumInput" placeholder="Search Artists"/>
+                        <input type="text" class="search-query form-control" id="albumInput" placeholder="Search Artists" />
                         <span class="input-group-btn">
                          <button class="btn btn-danger" type="button" id="submit">
                          <span class=" glyphicon glyphicon-search"></span>
@@ -33,37 +33,45 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Music Results</h4>
+                    <h4 class="modal-title">Song Results</h4>
                 </div>
                 <div class="modal-body">
                     <table id="albumTable">
                         <thead>
-                        <tr>
-                            <th>Playlist</th>
-                            <th>Artist</th>
-                            <th>Title</th>
-                            <th>Playcount</th>
-                        </tr>
+                            <tr>
+                                <th>Playlist</th>
+                                <th>Artist</th>
+                                <th>Title</th>
+                                <th>Playcount</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            
+
                         </tbody>
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+                    <button type="button" class="btn btn-default" id="closeModal" data-dismiss="modal">Close</button>
+                </div> 
             </div>
         </div>
     </div>
-    <div class="panel panel-info" id="playlist-panel">
-        <div class="panel-heading">My Playlist</div>
-        <div class="panel-body">
-        
-        <label id="displayPlaylistArea"></label>
-
-                       
-            
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-info" id="playlist-panel">
+                <div class="panel-heading">Staged Songs</div>
+                <div class="panel-body">
+                    <label id="stagePlaylistArea"></label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-info" id="playlist-pane2">
+                <div class="panel-heading">My Playlist</div>
+                <div class="panel-body">
+                    <label id="displayPlaylistArea"></label>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
