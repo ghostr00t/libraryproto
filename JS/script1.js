@@ -1,10 +1,10 @@
 $(document).ready(function () {
     function Album(title, artist, playcount) {
-    this.myAlbum.name = title;
-    this.artist.name = artist;
-    this.newAlbum.playcount = playcount;
+        this.newAlbum.name = title;
+        this.newAlbum.artist.name = artist;
+        this.newAlbum.playcount = playcount;
     }
- 
+
     $("#albumInput").keyup(function (event) {
         if (event.keyCode == 13) {
             $("#submit").click();
@@ -29,6 +29,7 @@ var newAlbum = {};
 
 playlist.prototype.myAjax = function () {
     var artist = document.getElementById('albumInput').value;
+    var self = this;
     $.ajax({
         type: "GET",
         url: 'http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + artist + '&api_key=3c60da92d4028ba77acda77715e046d5&format=json&callback=?',
@@ -42,28 +43,40 @@ playlist.prototype.myAjax = function () {
             }
             $(".addbtn").on("click", function () {
                 $('#albumTable').find('tr').click(function () {
-                    for (i = 0; i < 1; i++) {
-                        var returnedListId =$(this).attr("data-returned-list-id");
-                        newAlbum = returnedList.topalbums.album[returnedListId];
-                        return(newAlbum);
-
-                    }
+                    var returnedListId = $(this).attr("data-returned-list-id");
+                    newAlbum = returnedList.topalbums.album[returnedListId];
+                    self.addAlbum(newAlbum);
+                    //return (newAlbum);
                 });
-
             });
         }
     });
-}
+};
+
 
 playlist.prototype.myPlaylistArray = new Array();
 
+playlist.prototype.displayPlaylist = function () {
+    $("#displayPlaylist").empty();
+    $.each(this.myPlaylistArray, function (index, value) {
+        $("#displayPlaylistArea").append(
+            "<tr>",
+            "<td>" + value.artist.name + "</td>",
+            "<td>" + value.name + "</td>",
+            "<td>" + value.playcount + "</td>",
+            "</tr>"
+        )
+    });
+}
+
 playlist.prototype.addAlbum = function (album) {
     for (i = 0; i < this.myPlaylistArray.length; i++) {
-        if (this.myPlaylistArray[i].title == newAlbum.title) {
+        if (this.myPlaylistArray[i].name == newAlbum.name) {
             return false;
         }
     }
     this.myPlaylistArray.push(album);
+    this.displayPlaylist();
     return true;
 };
 
