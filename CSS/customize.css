@@ -1,10 +1,29 @@
 body {
     padding-top: 50px;
-    background-color: lightblue;
+    background: radial-gradient(black 15%, transparent 16%) 0 0, radial-gradient(black 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 8px 9px;
+    background-color: #282828;
+    background-size: 16px 16px;
+    
 }
 
+.btn-methods {
+    border-radius: 25px;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    border-radius: 25px;
+    font-weight: bold;
+    
+}
+.btn-get {
+    background-color: #4CAF50;
+    border-radius: 25px;
+    font-weight: bold;
+}
 h1 {
     text-align: center;
+    color: 	#C0C0C0;
 }
 
 .main-logo {
@@ -41,17 +60,17 @@ h1 {
     overflow: auto;
 }
 
-table {
-    max-width: 100%;
+.playlist-table {
+    margin: 0 auto;
 }
 
 th {
-    background lightblue;
+   
     font-weight: bold;
     padding: 6px;
 }
 
 td {
-    background: #f9f9f9;
+   
     padding: 6px;
 }
