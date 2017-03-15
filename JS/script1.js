@@ -1,9 +1,5 @@
 $(document).ready(function () {
-    function Album(title, artist, playcount) {
-        this.newAlbum.name = title;
-        this.newAlbum.artist.name = artist;
-        this.newAlbum.playcount = playcount;
-    }
+   
 
     $("#albumInput").keyup(function (event) {
         if (event.keyCode == 13) {
@@ -14,13 +10,13 @@ $(document).ready(function () {
     $("#submit").on("click", function () {
         $("#modal").modal("show");
         playlist1.myAjax();
-
     });
+
     $("#closeModal").on("click", function () {
         $("#albumTable").empty();
     });
 
-    $("#closeModa2").on("click", function () {
+    $("#closeModal2").on("click", function () {
         $("#albumTable").empty();
     });
 
@@ -58,7 +54,6 @@ $(document).ready(function () {
                 "<tr>",
                 "<td>" + value.artist.name + "</td>",
                 "<td>" + value.name + "</td>",
-                //"<td>" + value.playcount + "</td>",
                 "</tr>"
             )
         });
@@ -75,7 +70,6 @@ $(document).ready(function () {
                 "<tr>",
                 "<td>" + value.artist.name + "</td>",
                 "<td>" + value.name + "</td>",
-                //"<td>" + value.playcount + "</td>",
                 "</tr>"
             )
         });
@@ -89,8 +83,6 @@ $(document).ready(function () {
             $("#modal-pop-content").append(
                 "<tr>",
                 "<td>" + value + "</td>",
-                //"<td>" + value.name + "</td>",
-                //"<td>" + value.playcount + "</td>",
                 "</tr>"
             )
         });
@@ -104,7 +96,6 @@ $(document).ready(function () {
             "<tr>",
             "<td>" + randomAlbum.artist.name + "</td>",
             "<td>" + randomAlbum.name + "</td>",
-            //"<td>" + value.playcount + "</td>",
             "</tr>"
         )
     });
@@ -116,8 +107,6 @@ $(document).ready(function () {
         $("#modal-pop-content").append(
             "<tr>",
             "<td>" + randomArtist.name + "</td>",
-            //"<td>" + randomAlbum.name + "</td>",
-            //"<td>" + value.playcount + "</td>",
             "</tr>"
         )
     });
@@ -161,7 +150,7 @@ playlist.prototype.stagePlaylist = function () {
             "<tr>",
             "<td>" + value.artist.name + "</td>",
             "<td>" + value.name + "</td>",
-            //"<td>" + value.playcount + "</td>",
+            "<td>" + value.playcount + "</td>",
             "</tr>"
         )
     });
