@@ -1,6 +1,5 @@
 $(document).ready(function () {
    
-
     $("#albumInput").keyup(function (event) {
         if (event.keyCode == 13) {
             $("#submit").click();
@@ -27,6 +26,7 @@ $(document).ready(function () {
             albums.push(returnedList.topalbums.album[index]);
         });
         playlist1.addAlbums(albums);
+       
         $("#modal").modal("hide");
         $("#albumTable").empty();
     });
@@ -112,6 +112,8 @@ $(document).ready(function () {
     });
 });
 
+
+
 var playlist = function () { };
 
 var returnedList;
@@ -163,6 +165,7 @@ playlist.prototype.addAlbum = function (album) {
         }
     }
     this.myPlaylistArray.push(album);
+     playlist1.storeStuff(album);
     this.stagePlaylist();
     return true;
 };
@@ -233,6 +236,11 @@ playlist.prototype.getRandomArtistName = function () {
 };
 
 var playlist1 = new playlist();
+
+
+
+
+
 
 playlist.prototype.storeStuff = function () {
     if(typeof(Storage) !=="undefined") {
