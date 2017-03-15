@@ -52,24 +52,53 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" id="closeModal" data-dismiss="modal">Close</button>
-                </div> 
+                    <button type="button" class="btn btn-default" id="addSelected">Add Selected</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-pop" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Song Results</h4>
+                </div>
+                <div class="modal-body">
+                <div id="modal-pop-content"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" id="closeModal" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="panel panel-info" id="playlist-panel">
-                <div class="panel-heading">Staged Songs</div>
+                <div class="panel-heading"><button type="submit" id="show-artists" class="btn btn-default">Show All Artists</button>
+                <button type="submit" id="random-album" class="btn btn-default">Random Album</button>
+                <button type="submit" id="random-artist" class="btn btn-default">Random Artist</button>My Playlist</div>
                 <div class="panel-body">
-                    <label id="stagePlaylistArea"></label>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="panel panel-info" id="playlist-pane2">
-                <div class="panel-heading">My Playlist</div>
-                <div class="panel-body">
-                    <label id="displayPlaylistArea"></label>
+                    <form class="form-inline" action="#">
+                        <div class="form-group">
+                            <input class="form-control" id="delArtist" placeholder="Enter Artist">
+                            <button type="submit" id="delete-artist" class="btn btn-default">Delete</button>
+                            <button type="submit" id="get-artist" class="btn btn-default">Get</button>
+                            <input class="form-control" id="delTitle" placeholder="Enter Title">
+                            <button type="submit" id="delete-title" class="btn btn-default">Delete</button>
+                            <button type="submit" id="get-title" class="btn btn-default">Get</button>
+                        </div>
+                    </form>
+                    <table>
+                        <thead>
+                            <th>Artist</th>
+                            <th>Title</th>
+                        </thead>
+                        <tbody id="stagePlaylistArea">
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
